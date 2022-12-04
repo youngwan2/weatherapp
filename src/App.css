@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+.App{
+    display: flex;
+    justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background-image: url('/public/weatherback.gif');
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+}
+.main{
+    border: 1px solid black;
+    margin-top: 6rem;
+    border-radius: 5px;
+    background-color: white;
+    opacity: 90%;
+    box-shadow: 12px 12px 2px 1px rgba(25, 25, 110, 0.2); 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.main .weather-icon{
+    text-align: center;
+    margin-top: -25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main .weather-explanation{
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.main .weather-data{
+    border: 1px solid black;  border-bottom: hidden;
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 1rem;
+    color: white;
+    background-color: rgb(0, 0, 0);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main .contents{
+    padding: 2rem;
+    opacity: 100%;
+    
+    
+}
+
+.main .title{
+    margin: 0 -1px 0 0;
+    border-top-left-radius: 5px; border-top-right-radius: 5px;
+    padding: 5px;
+    background-color: black;
+    text-align: center;
+    color:white;
+}
+
+span{
+    font-size: 18px;
+    color: yellow;
+}
+
+
+.nav{
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+
+.btn{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.button{
+    position: absolute;
+    bottom: 140px;
+    text-align: center;
+    background-color:rgb(255, 255, 255);
+    width: 350px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px;
+    opacity: 90%;
+    box-shadow: 12px 12px 2px 1px rgba(25, 25, 110, 0.2); 
+}
+
+.btn-arr:focus{
+    background-color: rgb(245, 242, 84);
+    color: black;
+    border-color: rgb(177, 177, 12);
+}
+
+
+/* 로딩 스피너 */
+
+
+
+
+
+/* 미디어 쿼리  */
+
+@media all and ( max-width:700px ){
+    .button{
+        bottom: 130px;
+    }
+}
+
+@media all and ( max-width:360px ){
+    .btn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-arr{
+        width: 60%;
+        
+    }
+
+    .button{
+        top: 1rem;
+        width: 90%;
+        bottom:auto;
+    }
+
+    .main{
+        margin-top: 9rem;
+    }
 }
